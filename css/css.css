@@ -1,0 +1,13 @@
+
+* {
+    background-color: rgb(15, 15, 15);
+}
+
+#cabecera {
+    display: flex;
+    width: 100%;
+}
+
+#cabecera, #cabecera * {
+    background-color: rgb(15, 15, 15);
+}
