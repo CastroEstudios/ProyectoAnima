@@ -9,6 +9,100 @@ body {
     margin: 0;
 }
 
+.pantalla-carga { 
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    font-size: 0;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    z-index: 100;
+    background-color: black;
+    animation: loading-fade 5.5s linear;
+    animation-iteration-count: 1;
+}
+
+@keyframes loading-fade {
+    0% {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+    }
+    78% {
+        opacity: 1;
+    }
+    99% {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+    100% {
+        width: 0%;
+        height: 0%;
+    }
+}
+
+.pantalla-carga2 { 
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    font-size: 0;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    z-index: 100;
+    background-color: black;
+    animation: loading-fade2 1s ease-in-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes loading-fade2 {
+    0% {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+    }
+    99% {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        left: 100%;
+    }
+}
+
+.texto-carga {
+    background-color: black;
+    font-size: 4rem;
+    display: block;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    white-space: nowrap;
+    border-right: 4px solid white;
+    width: 12ch;
+    animation: typing 2s steps(12), blink .5s infinite step-end alternate;
+    overflow: hidden;
+    margin: auto;
+}
+
+@keyframes typing {
+    from { 
+        width: 0; 
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
 #cabecera, #contenido_principal, #pie_pagina {
     margin: 0rem 3rem;
 }
