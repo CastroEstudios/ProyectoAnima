@@ -5,60 +5,18 @@
     border: 1px solid white;
 }
 
-body {
+html,body {
     margin: 0;
-}
-
-.pantalla-carga { 
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    font-size: 0;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    z-index: 100;
-    background-color: black;
-    animation: loading-fade 5.5s linear;
-    animation-iteration-count: 1;
-}
-
-@keyframes loading-fade {
-    0% {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 1;
-        width: 100%;
-        height: 100%;
-    }
-    78% {
-        opacity: 1;
-    }
-    99% {
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-    }
-    100% {
-        width: 0%;
-        height: 0%;
-    }
+    scroll-behavior: smooth;
 }
 
 .pantalla-carga2 { 
-    display: flex;
-    justify-content: center;
     position: fixed;
     font-size: 0;
     opacity: 0;
     top: 0;
     left: 0;
-    width: 0;
-    height: 0;
-    z-index: 100;
+    z-index: 5;
     background-color: black;
     animation: loading-fade2 1s ease-in-out;
     animation-iteration-count: 1;
@@ -75,31 +33,6 @@ body {
         width: 100%;
         height: 100%;
         left: 100%;
-    }
-}
-
-.texto-carga {
-    background-color: black;
-    font-size: 4rem;
-    display: block;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    white-space: nowrap;
-    border-right: 4px solid white;
-    width: 12ch;
-    animation: typing 2s steps(12), blink .5s infinite step-end alternate;
-    overflow: hidden;
-    margin: auto;
-}
-
-@keyframes typing {
-    from { 
-        width: 0; 
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
     }
 }
 
@@ -143,7 +76,9 @@ body {
 
 #mi_foto2, #mi_foto1, #contenedor_texto1, #contenedor_texto2 {
     width: 100%;
-    min-width: 384px;
+    height: 100%;;
+    min-width: 0;
+    min-height: 0;
 }
 
 #contenedor_perfil {
@@ -157,8 +92,8 @@ body {
 }
 
 #mi_foto {
-    width: 15%;
-    min-width: 130px;
+    width: 55%;
+    min-width: 0;
 }
 
 #pie_pagina {
@@ -180,4 +115,163 @@ body {
     display: block;
     width: 10%;
     margin: 3%;
+}
+
+/* ==================SCROLLBAR====================*/
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+#scrollPath {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 100%;
+    background-color: rgb(34, 34, 34);
+}
+
+#progressBar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 15px;
+    background-color: rgb(255, 241, 43);
+    z-index: 3;
+    transition: height .1s linear;
+}
+
+#pacman {
+    position: absolute;
+    bottom: -20px;
+    left: -15px;
+    width: 40px;
+    z-index: 4;
+    transform: rotateZ(90deg);
+    background-color: transparent;
+}
+
+.points {
+    position: fixed;
+    right: 5px;
+    width: 5px;
+    height: 5px;
+    background-color: rgb(255, 241, 43);
+}
+
+#point1 {
+    top: 7.5%;
+}
+
+#point2 {
+    top: 15%;
+}
+
+#point3 {
+    top: 22.5%;
+}
+
+#point4 {
+    top: 30%;
+}
+
+#point5 {
+    top: 37.5%;
+}
+
+#point6 {
+    top: 45%;
+}
+
+#point7 {
+    top: 52.5%;
+}
+
+#point8 {
+    top: 60%;
+}
+
+#point9 {
+    top: 67.5%;
+}
+
+#point10 {
+    top: 75%;
+}
+
+#point11 {
+    top: 82.5%;
+}
+
+#point12 {
+    top: 90%;
+}
+
+#point13 {
+    top: 97.5%;
+} 
+
+/* ================INDEX.HTML==================*/
+
+.pantalla-carga { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    font-size: 0;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    z-index: 100;
+    background-color: black;
+    animation: loading-fade 5.5s linear;
+    animation-iteration-count: 1;
+}
+
+@keyframes loading-fade {
+    0% {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+    }
+    78% {
+        opacity: 1;
+    }
+    99% {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+    100% {
+        width: 0px;
+        height: 0px;
+    }
+}
+
+.texto-carga {
+    background-color: black;
+    font-size: 4rem;
+    display: block;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    white-space: nowrap;
+    border-right: 4px solid white;
+    width: 12ch;
+    animation: typing 2s steps(12), blink .5s infinite step-end alternate;
+    overflow: hidden;
+    margin: auto;
+}
+
+@keyframes typing {
+    from { 
+        width: 0; 
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
