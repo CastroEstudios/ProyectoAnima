@@ -1,120 +1,290 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 * {
-    background-color: rgb(15, 15, 15);
+    background-color: #1f1f1f;
     color: white;
-    border: 1px solid white;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'sans-serif';
 }
 
 html,body {
     margin: 0;
     scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
 }
 
-.pantalla-carga2 { 
+.pantalla-carga { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     font-size: 0;
     opacity: 0;
     top: 0;
     left: 0;
-    z-index: 5;
-    background-color: black;
-    animation: loading-fade2 1s ease-in-out;
+    width: 0;
+    height: 0;
+    z-index: 100;
+    background-color: #1f1f1f;
+    animation: loading-fade 5.5s linear;
     animation-iteration-count: 1;
 }
 
-@keyframes loading-fade2 {
+/*@keyframes loading-fade {
     0% {
         opacity: 1;
         width: 100%;
         height: 100%;
     }
-    99% {
+    78% {
         opacity: 1;
+    }
+    99% {
         width: 100%;
         height: 100%;
-        left: 100%;
+        opacity: 0;
+    }
+    100% {
+        width: 0px;
+        height: 0px;
+    }
+}*/
+
+.texto-carga {
+    color: white;
+    background-color: #1f1f1f;
+    font-size: 4rem;
+    display: block;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    white-space: nowrap;
+    border-right: 4px solid white;
+    width: 12ch;
+    animation: typing 2s steps(12), blink .5s infinite step-end alternate;
+    overflow: hidden;
+    margin: auto;
+}
+
+@keyframes typing {
+    from { 
+        width: 0; 
     }
 }
 
-#cabecera, #contenido_principal, #pie_pagina {
-    margin: 0rem 3rem;
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
 
 #cabecera {
     display: flex;
-    margin-bottom: 6%;
-    align-items: center;
+    margin-bottom: 5%;
+    padding: .5%;
+    font-size: .8rem;
+    box-shadow: 0rem .5rem 1rem #b98f33;
 }
 
-
-#menu_contenedor {
+#navegacion-contenedor {
     display: flex;
     flex-grow: 1;
     justify-content: space-around;
     align-items: center;
-    width: 100;
+    width: 100%;
     margin: 0rem 8%;
 }
 
-#menu_imagen {
-    width: 8%;
-    min-width: 70px;
-    margin-left: 2%;
+.navegacion-opciones {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-shadow: 0px 0px .35rem #b98f33;
 }
 
-.menu_opciones a {
+.navegacion-opciones a {
     text-decoration: none;
+    transition: color .1s linear, background-color 1s linear;
 }
 
-#contenido1, #contenido2 {
-    display: flex;
-    justify-content: flex-start;
-    gap: 4%;
-    padding: 2%;
-    margin-bottom: 8%;
+.navegacion-opciones a:hover {
+    color: #000000;
+    background-color: white;
 }
 
-#mi_foto2, #mi_foto1, #contenedor_texto1, #contenedor_texto2 {
+#container-wordcloud {
+    position: relative;
     width: 100%;
-    height: 100%;;
+    height: 80%;
+}
+
+.wordcloud {
+    position: absolute;
+    background-color: transparent;
+    text-shadow: 0px 0px .65rem #b98f33;
+}
+
+#wordcloud1 {
+    top: 8%;
+    left: 15%;
+    font-size: 6.5rem;
+    font-weight: 700;
+    font-style: italic;
+    transform: rotateZ(90deg);
+}
+
+#wordcloud2 {
+    top: 20%;
+    left: 8.5%;
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+#wordcloud3 {
+    top: 14%;
+    left: 30%;
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+#wordcloud4 {
+    top: 2%;
+    left: 29%;
+    font-size: 4rem;
+    font-weight: 600; 
+}
+
+#wordcloud5 {
+    top: 52%;
+    left: 20%;
+    font-size: 3.4rem;
+    font-weight: 600;
+}
+
+#wordcloud6 {
+    top: 5%;
+    left: 10%;
+    font-size: 3.4rem;
+    font-weight: 600;
+    font-style: italic;
+    transform: rotateZ(90deg);
+}
+
+#imagen-wordcloud {
+    position: absolute;
+    top: 3%;
+    right: 12%;
+    width: 30%;
+    z-index: 1;
+    box-shadow: 0px 0px 2rem #050505;
+}
+
+#imagen-wordcloud2 {
+    position: absolute;
+    top: 40%;
+    right: 40%;
+    width: 22.5%;
+    box-shadow: 0px 0px 2rem #050505;
+}
+
+
+
+/*=================LISTAS=================*/
+
+#blank-space {
+    height: 18%; 
+    background: linear-gradient(#1f1f1f, #181818, #1f1f1f);
+}
+
+#contenedor-lista {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    padding: 4%;
+}
+
+.caja-lista {
+    border: 12px solid white;
+    box-shadow: 0px 0px 1rem #b98f33;
+    padding: 4%;
+    text-shadow: 0px 0px .35rem #b98f33;
+}
+
+.caja-lista h2 {
+    font-size: 3.5rem;
+    margin-top: 4%;
+}
+
+#caja-lista1 {
+    width: 50%;
+    height: 90%;
+}
+
+#caja-lista2 {
+    width: 35%;
+    height: 100%;
+}
+
+.caja-lista ul {
+    font-size: 3rem;
+}
+
+/*===============TEXTO================*/
+
+.seccion-texto, #contenedor-perfil {
+    position: relative;
+    padding: 0% 4%;
+}
+
+.seccion-texto {
+    height: 65%;
+}
+
+.seccion-texto h1 {
+    font-size: 6rem;
+    margin-top: 0%;
+    text-shadow: 0px 0px .5rem #b98f33;
+}
+
+.contenedor-texto {
+    position: absolute;
+    font-size: 2rem;
+    top: 25%;
+    left: 20%;
+    width: 70%;
     min-width: 0;
     min-height: 0;
 }
 
-#contenedor_perfil {
-    display: flex; 
-    align-items: center;  
+.seccion-texto p {
+    text-shadow: 0px 0px .35rem #b98f33;
 }
 
-#texto_perfil {
-    width: 100%;
-    flex-grow: 1;
-}
+/* ================PIE-PAGINA====================*/
 
-#mi_foto {
-    width: 55%;
-    min-width: 0;
-}
-
-#pie_pagina {
+#pie-pagina {
     display: flex;
     align-items: center;
+    padding: 2%;
 }
 
-#pie_texto {
-    width: 30%;
-    flex-grow: 1;
-    text-align: right;
+#pie-pagina, #pie-pagina * {
 }
 
 #rss {
-    width: 70%;
+    width: 100%;
 }
 
-.rss_imagenes {
-    display: block;
-    width: 10%;
+.rss-imagenes {
+    display: inline-block;
+    width: 12%;
     margin: 3%;
+}
+
+#pie-texto {
+    width: 80%;
+    text-align: right;
 }
 
 /* ==================SCROLLBAR====================*/
@@ -123,13 +293,18 @@ html,body {
     width: 0;
 }
 
+#scrollPath, #progressBar, .points {
+    margin-right: 5px;
+}
+
 #scrollPath {
+    background-color: transparent;
     position: fixed;
     top: 0;
     right: 0;
     width: 15px;
-    height: 100%;
-    background-color: rgb(34, 34, 34);
+    height: 101%;
+    border: 2px solid rgb(35, 35, 255);
 }
 
 #progressBar {
@@ -144,7 +319,7 @@ html,body {
 
 #pacman {
     position: absolute;
-    bottom: -20px;
+    bottom: -28px;
     left: -15px;
     width: 40px;
     z-index: 4;
@@ -152,11 +327,11 @@ html,body {
     background-color: transparent;
 }
 
-.points {
+#progressBar .points {
     position: fixed;
     right: 5px;
-    width: 5px;
-    height: 5px;
+    width: 6px;
+    height: 6px;
     background-color: rgb(255, 241, 43);
 }
 
@@ -211,67 +386,3 @@ html,body {
 #point13 {
     top: 97.5%;
 } 
-
-/* ================INDEX.HTML==================*/
-
-.pantalla-carga { 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    font-size: 0;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    z-index: 100;
-    background-color: black;
-    animation: loading-fade 5.5s linear;
-    animation-iteration-count: 1;
-}
-
-@keyframes loading-fade {
-    0% {
-        opacity: 1;
-        width: 100%;
-        height: 100%;
-    }
-    78% {
-        opacity: 1;
-    }
-    99% {
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-    }
-    100% {
-        width: 0px;
-        height: 0px;
-    }
-}
-
-.texto-carga {
-    background-color: black;
-    font-size: 4rem;
-    display: block;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    white-space: nowrap;
-    border-right: 4px solid white;
-    width: 12ch;
-    animation: typing 2s steps(12), blink .5s infinite step-end alternate;
-    overflow: hidden;
-    margin: auto;
-}
-
-@keyframes typing {
-    from { 
-        width: 0; 
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}
