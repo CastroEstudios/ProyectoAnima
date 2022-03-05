@@ -32,7 +32,7 @@ body * {
     animation-iteration-count: 1;
 }
 
-@keyframes loading-fade {
+/*@keyframes loading-fade {
     0% {
         opacity: 1;
         width: 100%;
@@ -50,7 +50,7 @@ body * {
         width: 0px;
         height: 0px;
     }
-}
+}*/
 
 .loading-screen-text {
     color: white;
@@ -198,6 +198,10 @@ body * {
     align-items: center;
 }
 
+#row-container2 {
+    justify-content: space-evenly;
+}
+
 .list-container {
     border: 12px solid white;
     box-shadow: 0px 0px 1rem #b98f33;
@@ -295,7 +299,7 @@ body * {
 #pacman {
     position: absolute;
     bottom: -28px;
-    left: -15px;
+    left: -14px;
     width: 40px;
     z-index: 4;
     transform: rotateZ(90deg);
