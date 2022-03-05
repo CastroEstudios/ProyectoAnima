@@ -10,36 +10,40 @@
 </head>
 <body>
     
-    <div class="pantalla-carga">
-        <span class="texto-carga">Proyecto Anima</span>
+    <div class="loading-screen">
+        <span class="loading-screen-text">Proyecto Anima</span>
     </div>
     
-    <header id="cabecera">
-        <div id="navegacion-contenedor">
-            <h2 class="navegacion-opciones"><a href="index.html">Inicio</a></h2>
-            <h2 class="navegacion-opciones">Pronto...</h2>
-            <h2 class="navegacion-opciones">Pronto...</h2>
-            <h2 class="navegacion-opciones" id=""><a href="">Sobre Mí</a></h2>
+    <header id="navigation">
+        <div id="navigation-container">
+            <h1 class="navigation-options"><a href="index.html">Inicio</a></h2>
+            <h1 class="navigation-options">Pronto...</h2>
+            <h1 class="navigation-options">Pronto...</h2>
+            <h1 class="navigation-options" id=""><a href="">Sobre Mí</a></h2>
         </div>
     </header>
     
-    <div id="container-wordcloud">
-        <p class="wordcloud" id="wordcloud1">Ambición</p>
-        <p class="wordcloud" id="wordcloud2">Mejorar</p>
-        <p class="wordcloud" id="wordcloud3">Desafío</p>
-        <p class="wordcloud" id="wordcloud4">Trabajo</p>
-        <p class="wordcloud" id="wordcloud5">Esfuerzo</p>
-        <p class="wordcloud" id="wordcloud6">Reflexión</p>
-        <img src="images/EkvSASEW0AMlvSg.jpg" alt="si" id="imagen-wordcloud"/>
-        <img src="images/EkvSASEW0AMlvSg.jpg" alt="" id="imagen-wordcloud2"/>
+    <div class="row-container" id="row-container1">
+        <div class="col-container" id="col-container1">
+            <h1 id="Titulo"> Ambición y Aprendizaje </h1>
+            <span> Mi nombre es Daniel Castro, </span>
+            <span> me apasiona aprender y me gustaría </span>
+            <span> dedicarme profesionalmente </span>
+            <span> al diseño y programación web. </span>
+            <button id="button-hire">
+                <span>¡Contrátame!</span>
+                <span>Hire me!</span>
+            </button>
+        </div>
+        <div class="col-container" id="col-container2">
+        <img src="images/EkvSASEW0AMlvSg.jpg" alt="" id="image-col"/>
+        </div>
     </div>
 
-    <div id="blank-space"></div>
-
-    <div id="contenedor-lista">
-        <div class="caja-lista" id="caja-lista1">
+    <div class="row-container" id="row-container2">
+        <div class="list-container" id="list-container1">
             <h2>Software 3D</h2>
-            <ul id="lista1">
+            <ul>
                 <li>Blender</li>
                 <li>Substance Painter</li>
                 <li>Marvelous Designer</li>
@@ -47,9 +51,9 @@
                 <li>Adobe Photoshop</li>
             </ul>
         </div>
-        <div class="caja-lista" id="caja-lista2">
+        <div class="list-container" id="list-container2">
             <h2>Lenguajes</h2>
-            <ul id="lista2">
+            <ul>
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>Javascript</li>
@@ -60,11 +64,9 @@
         </div>
     </div>
 
-    <div id="blank-space"></div>
-
-    <div class="seccion-texto" id="seccion-2">
+    <div class="row-container" id="row-container3">
         <h1>Lorem</h1>
-        <div class="contenedor-texto">
+        <div class="text-container">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta, 
                 nisi ac bibendum dignissim, orci neque porta lorem, non tincidunt neque 
                 quam id urna. Nulla augue magna, semper nec imperdiet eget, semper nec 
@@ -73,14 +75,12 @@
                 nulla dolor, rutrum pulvinar libero facilisis aliquam. Donec ligula odio, 
                 vestibulum sed faucibus et, consequat ut dui. Maecenas malesuada diam in 
                 felis tristique.</p>
-            </div>
         </div>
-
-        <div id="blank-space"></div>
+    </div>
         
-        <div class="seccion-texto" id="seccion-3">
+        <div class="row-container" id="row-container4">
             <h1>Lorem</h1>
-            <div class="contenedor-texto">
+            <div class="text-container">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta, 
                     nisi ac bibendum dignissim, orci neque porta lorem, non tincidunt neque 
                     quam id urna. Nulla augue magna, semper nec imperdiet eget, semper nec 
@@ -89,23 +89,21 @@
                     nulla dolor, rutrum pulvinar libero facilisis aliquam. Donec ligula odio, 
                     vestibulum sed faucibus et, consequat ut dui. Maecenas malesuada diam in 
                     felis tristique.</p>
-                </div>
             </div>
-            
-            <div id="blank-space"></div>
+        </div>
 
-            <footer id="pie-pagina">
-                <div id="rss">
-                    <img src="images/EkvSASEW0AMlvSg.jpg" alt="Imagen LinkedIn" class="rss-imagenes"/>
-                    <img src="images/EkvSASEW0AMlvSg.jpg" alt="Imagen Correo" class="rss-imagenes"/>
+            <footer id="footpage">
+                <div id="social-media">
+                    <img src="images/EkvSASEW0AMlvSg.jpg" alt="Imagen LinkedIn" class="social-media-images"/>
+                    <img src="images/EkvSASEW0AMlvSg.jpg" alt="Imagen Correo" class="social-media-images"/>
                 </div>
-                <div id="pie-texto">
+                <div id="footpage-text">
                     <p>Lorem ipsum</p>
                     <p>Lorem ipsum</p>
                     <p>Lorem ipsum</p>
                 </div>
                 <div id="progressBar" class="progressBlock">
-                    <img id="pacman" src="images/pacman.png">
+                    <img id="pacman" src="images/pacman.png"/>
                     <div class="points" id="point1"> &nbsp; </div>
                     <div class="points" id="point2"> &nbsp; </div>
                     <div class="points" id="point3"> &nbsp; </div>
