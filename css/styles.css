@@ -13,7 +13,6 @@ body * {
     color: white;
     box-sizing: border-box;
     font-family: 'Roboto', 'sans-serif';
-    overflow: hidden;
 }
 
 .loading-screen {
@@ -32,7 +31,7 @@ body * {
     animation: loading-fade 5.5s linear;
     animation-iteration-count: 1;
 }
-
+/*
 @keyframes loading-fade {
     0% {
         opacity: 1;
@@ -52,7 +51,7 @@ body * {
         height: 0px;
     }
 }
-
+*/
 .loading-screen-text {
     color: white;
     background-color: #1f1f1f;
@@ -141,7 +140,6 @@ body * {
     margin-top: 0;
     margin-bottom: 11%;
     font-size: 6rem !important;
-    font-weight: 700;
     font-style: italic;
     line-height: 6rem;
     letter-spacing: .2rem;
@@ -371,10 +369,6 @@ body * {
 
 @media only screen and (max-width: 1150px) {
 
-    #navigation {
-        margin-bottom: 10%;
-    }
-
     #navigation * {
         visibility: collapse;
     }
@@ -388,14 +382,8 @@ body * {
         text-align: justify;
     }
 
-    .row-container, .row-container p, .row-container h1 {
-        margin-right: 20px;
-    }
-
     #col-container1, #col-container2 {
-        display: flex;
         align-items: center;
-        justify-content: center;
         padding: 0;
         margin: auto;
         margin-bottom: 16%;
@@ -421,12 +409,25 @@ body * {
         margin: 16% 7.5%;
     }
 
+    #row-container2 h1 {
+        font-size: 2.6rem;
+    }
+
+    #row-container2 li {
+        font-size: 2.2rem;
+    }
+
     #list-container1, #row-container3, #row-container4, #footpage {
         margin-top: 32%;
     }
 
     #row-container3 h1, #row-container4 h1 {
         margin-left: 9.4%;
+        font-size: 3rem;
+    }
+
+    #row-container3 p, #row-container4 p {
+        font-size: 1.2rem;
     }
 
     .text-container {
