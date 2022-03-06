@@ -157,7 +157,7 @@ body * {
     margin-top: 11%;
     font-size: 1.6rem;
     padding: 2.5% 0%;
-    width: 34%;
+    width: 260px;
     background-color: rgb(158, 41, 41);
     border: 0;
     box-shadow: inset 0rem 0 0rem 0rem rgb(134, 16, 115);
@@ -401,10 +401,6 @@ body * {
         text-align: center;
     }
 
-    #button-hire {
-        width: 50%;
-    }
-
     .list-container, .row-container {
         margin: 16% 7.5%;
     }
@@ -444,5 +440,17 @@ body * {
 
     #footpage p {
         font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #row-container1 h1 {
+        font-size: 3.5rem !important;
+        line-height: 4.2rem;
+    }
+
+    #col-container2 img {
+        width: 10% !important;
+        min-width: 280px;
     }
 }
