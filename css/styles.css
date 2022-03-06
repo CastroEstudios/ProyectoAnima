@@ -439,18 +439,23 @@ body * {
     }
 
     #footpage p {
-        font-size: 1rem;
+        font-size: .8rem;
+        margin-right: 28px;
     }
 }
 
 @media only screen and (max-width: 600px) {
     #row-container1 h1 {
-        font-size: 3.5rem !important;
+        font-size: 3.2rem !important;
         line-height: 4.2rem;
     }
 
     #col-container2 img {
         width: 10% !important;
         min-width: 280px;
+    }
+    
+    #progressBar .points, #progressBar, #pacman, #scrollPath {
+        visibility: hidden;
     }
 }
