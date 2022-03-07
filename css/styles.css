@@ -238,6 +238,11 @@ body * {
     letter-spacing: .1rem;
 }
 
+#row-container3 a, #row-container4 a {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
 .text-container { 
  margin-left: 20%;
  margin-right: 10%;
