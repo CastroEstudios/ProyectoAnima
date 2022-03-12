@@ -232,7 +232,7 @@ body * {
 
 .text-container { 
  margin-left: 20%;
- margin-right: 10%;
+ margin-right: 15%;
 }
 
 .text-container p:nth-child(1-2) {
@@ -514,6 +514,15 @@ body * {
 
     div#row-container4 div.text-container:nth-child(2) {
         margin-bottom: 5%;
+    }
+
+    .social-media-images, .rss-link {
+        width: 3%;
+        min-width: 30px;
+    }
+
+    #footer-text {
+        font-size: .8rem;
     }
     
     #progressBar .points, #progressBar, #pacman, #scrollPath {
