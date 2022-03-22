@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-
+    <link rel="stylesheet" href="css/index-styles.css">
     <title>CV Daniel Castro</title>
 </head>
 <body>
@@ -16,129 +15,92 @@
     
     <header id="navigation">
         <div id="navigation-container">
-            <div id="hamburger-menu">
+            <div id="hamburger-menu" onclick="onClickMenu()">
                 <div class="hamburger-item"></div>
                 <div class="hamburger-item"></div>
                 <div class="hamburger-item"></div>
             </div>
-            <h1 class="navigation-options"><a href="index.html">Inicio</a></h2>
-            <h1 class="navigation-options">Pronto...</h2>
-            <h1 class="navigation-options">Pronto...</h2>
-            <h1 class="navigation-options" id=""><a href="">Sobre Mí</a></h2>
+            <div id="nav-menu">
+                <p class="navigation-options"><a href="index.html">Inicio</a></p>
+                <p class="navigation-options">Pronto...</p>
+                <p class="navigation-options"><a href="html/contactame.html">Contáctame</a></p>
+                <p class="navigation-options"><a href="html/sobre-mi.html">Sobre Mí</a></p>
+            </div>
         </div>
     </header>
     
-    <div class="row-container" id="row-container1">
-        <div class="col-container" id="col-container1">
-            <h1 id="Titulo"> Ambición y Aprendizaje </h1>
-            <span> Mi nombre es Daniel Castro, </span>
-            <span> me apasiona aprender y me gustaría </span>
-            <span> dedicarme profesionalmente </span>
-            <span> al diseño y programación web. </span>
-            <button id="button-hire">
-                <span>¡Contrátame!</span>
-                <span>Hire me!</span>
-            </button>
-        </div>
-        <div class="col-container" id="col-container2">
-        <img src="images/EkvSASEW0AMlvSg.jpg" id="image-col"/>
-        </div>
-    </div>
-
-    <div class="row-container" id="row-container2">
-        <div class="list-container" id="list-container1">
-            <h1>Software 3D</h2>
-            <ul>
-                <li>Blender</li>
-                <li>Substance Painter</li>
-                <li>Marvelous Designer</li>
-                <li>Adobe Illustrator</li>
-                <li>Adobe Photoshop</li>
-            </ul>
-        </div>
-        <div class="list-container" id="list-container2">
-            <h1>Lenguajes</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Javascript</li>
-                <li>Java</li>
-                <li>SQL</li>
-                <li>Python</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="row-container" id="row-container3">
-        <h1>Perfil</h1>
-        <div class="text-container">
-            <p>21 años, nativo de Tenerife. 
-                De naturaleza tranquila, me gusta estar en continuo aprendizaje y mejorar poco a poco cada día en la mayor cantidad de cosas posibles. 
-                Me gustan los videojuegos de todos los géneros, se podría decir que tenía una consola en las manos cuando empecé a caminar.
-                Me llevo bien con todo el mundo, caigo bien fácil y tengo un buen sentido del humor que de manera alegre puede brindar un frescura al ambiente de trabajo.
-                </p>
-        </div>
-    </div>
-        
-        <div class="row-container" id="row-container4">
-            <h1>Experiencia</h1>
-            <div class="text-container">
-                <h2>Final Fantasy XIV Modder</h2>
-                <h2>2020-ACTUALIDAD</h2>
-                <p> 
-                    El último año y medio he estado trabajando duro todos los días para formarme en el mundo del arte 3D, aprendiendo Blender mediante numerosos tutoriales, cursos y prácticas. He llegado a realizar varios mods para el juego Final Fantasy XIV, especialmente equipamiento de distinto tipo como armaduras, muchos tipos de ropa, mascotas, assets, diferentes tallas de cuerpos...
-                    Llegando a tener un trabajo freelance de comisiones solicitadas por numerosos clientes de la comunidad y donaciones.
-                </p>
-                <p id="reel-link"> 
-                    <a href="https://drive.google.com/drive/folders/1Ox73tSC57_vMo-qqbE58xdgg2Oj9aFet?usp=sharing">
-                    Ejemplos de trabajos
-                    </a>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slider-content" id="last-clone">
+                <a href="./html/sobre-mi.html">
+                    <img src="./images/solid-red-background.jpg"/>
+                    <h1 class="title">Sobre Mí</h1>
+                    <p class="text">
+                        <span class="new-line">En esta sección expongo mi plan de futuro, valores, proyectos, estudios, experiencia...</span>
+                        <span class="new-line">Además de mi conocimiento con diferentes programas y ejemplos de mis proyectos.</span>
+                    </p>
+                </a>
+            </div>
+            <div class="slider-content">
+                <a href="./index.html">
+                    <img src="./images/istockphoto-656453072-612x612.jpg"/>
+                    <h1 class="title">Inicio</h1>
+                    <p class="text">
+                        <span class="new-line">Bienvenid@ a mi página personal.</span>
+                        <span class="new-line">Aquí podrás conocerme y conocer mis proyectos un poco más a fondo.</span>
+                        <span class="new-line">Siéntete libre de entrar en las demás secciones y explorar mi contenido.</span>
+                        <span class="new-line-bold">Haz click en cualquier parte de las imágenes para ir a su correspondiente sección.</span>
+                    </p>
+                </a>
+            </div>
+            <div class="slider-content">
+                <a href="#">
+                    <img src="./images/istockphoto-1273929462-612x612.jpg"/>
+                    <h1 class="title">Pronto...</h1>
+                    <p class="text">
+                        <span class="new-line">Este sitio está en construcción, me gustaría implementar más secciones con más información, 
+                            más proyectos, mejor orden y mejor estética a medida que voy aprendiendo.</span>
+                    </p>
+                </a>
+            </div>    
+            <div class="slider-content">
+                <a href="./html/contactame.html">
+                    <img src="./images/istockphoto-937025540-612x612.jpg"/>
+                    <h1 class="title">Contáctame</h1>
+                    <p class="text">
+                        <span class="new-line">Entra en este apartado y rellena el formulario con tus datos para contactarme.</span>
+                    </p>
+                </a>
+            </div>  
+            <div class="slider-content">
+                <a href="./html/sobre-mi.html">
+                    <img src="./images/solid-red-background.jpg"/>
+                    <h1 class="title">Sobre Mí</h1>
+                    <p class="text">
+                        <span class="new-line">En esta sección expongo mi plan de futuro, valores, proyectos, estudios, experiencia...</span>
+                        <span class="new-line">Además de mi conocimiento con diferentes programas y ejemplos de mis proyectos.</span>
+                    </p>
+                </a>
+            </div>
+            <div class="slider-content" id="first-clone">
+                <img src="./images/istockphoto-656453072-612x612.jpg"/>
+                <h1 class="title">Inicio</h1>
+                <p class="text">
+                    <span class="new-line">Bienvenid@ a mi página personal.</span>
+                    <span class="new-line">Aquí podrás conocerme y conocer mis proyectos un poco más a fondo.</span>
+                    <span class="new-line">Siéntete libre de entrar en las demás secciones y explorar mi contenido.</span>
+                    <span class="new-line-bold">Haz click en cualquier parte de las imágenes para ir a su correspondiente sección.</span>
                 </p>
             </div>
         </div>
+    </div>
 
-            <footer id="footpage">
-                <div id="social-media">
-                    <a href="https://www.linkedin.com/in/daniel-castro-cruz-5a548a114/" class="rss-link">
-                        <img src="images/linkedin.png" alt="Imagen LinkedIn" class="social-media-images"/>
-                    </a>
-                    <a href="https://www.discordapp.com/users/329969613410533376" class="rss-link">
-                        <img src="images/discord-logo-2-1.png" alt="Imagen Correo" class="social-media-images"/>
-                    </a>
-                   
-                    <a href="mailto:danielcastroestudios@gmail.com" class="rss-link">
-                        <img src="images/gmail-logo-16.png" alt="Imagen Correo" class="social-media-images"/>
-                    </a>
-                </div>
-                <div id="footer-text">
-                    <p>
-                        daniel-castro-cruz-5a548a114
-                    </p>
-                    <p>
-                        Discord: Anima#1000
-                    </p>
-                    <p>
-                        danielcastroestudios@gmail.com
-                    </p>
-                </div>
-                <div id="progressBar" class="progressBlock">
-                    <img id="pacman" src="images/pacman.png"/>
-                    <div class="points" id="point1"> &nbsp; </div>
-                    <div class="points" id="point2"> &nbsp; </div>
-                    <div class="points" id="point3"> &nbsp; </div>
-                    <div class="points" id="point4"> &nbsp; </div>
-                    <div class="points" id="point5"> &nbsp; </div>
-                    <div class="points" id="point6"> &nbsp; </div>
-                    <div class="points" id="point7"> &nbsp; </div>
-                    <div class="points" id="point8"> &nbsp; </div>
-                    <div class="points" id="point9"> &nbsp; </div>
-                    <div class="points" id="point10"> &nbsp; </div>
-                    <div class="points" id="point11"> &nbsp; </div>
-                    <div class="points" id="point12"> &nbsp; </div>
-                    <div class="points" id="point13"> &nbsp; </div>
-                </div>
-                <div id="scrollPath"></div>
-            </footer>
-            <script src="scripts/scrollbar.js"></script>
-        </body>
-        </html>
+    <button id="prev-button"><img src="./images/Arrow-icon-by-ahlangraphic-151-580x386.png" class="arrow-left"></button>
+    <button id="next-button"><img src="./images/Arrow-icon-by-ahlangraphic-151-580x386.png" class="arrow-right"></button>
+
+    <script src="scripts/hamburger-menu.js"></script>
+    <script src="scripts/index-slider.js"></script>
+
+</body>
+
+</html>

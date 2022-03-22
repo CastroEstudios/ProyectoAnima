@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+
+    /*https://www.super-simple.net/blog/un-css-reset-moderno/*/
+    
+    --default-background: linear-gradient(190deg, #1f1f1f, #1f1f1f, rgba(66, 64, 52, 0.829)) repeat fixed;
+    --primary-color: #1f1f1f;
+    --secondary-color: #b98f33;
+    --default-font-family: 'Roboto', 'sans-serif';
+    --p-font-size: 1.4rem;
+    --p-line-height: 2.2rem;
+    --p-letter-spacing: .06rem;
+    --h2-font-size: 1.8rem;
+    --h2-letter-spacing: .1rem;
+    --h1-font-size: 3.2rem;
+    --h1-letter-spacing: .15rem;
+}
+
+html,body {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    width: 100%;
+    background: var(--default-background);
+}
+
+body * {
+    background-color: transparent;
+    color: white;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'sans-serif';
+}
+
+/* ================CABECERA====================*/
+
+#navigation, #navigation * {
+    background-color: var(--secondary-color);
+}
+
+#navigation {
+    margin-bottom: 7%;
+    padding: .75%;
+    box-shadow: 0rem .5rem 1rem var(--secondary-color);
+}
+
+#nav-menu {
+    display: flex;
+    justify-content: space-around;
+    margin: 0rem 8%;
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+.navigation-options {
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: .06rem;
+}
+
+.navigation-options a {
+    text-decoration: none;
+    transition: color .1s linear;
+}
+
+.navigation-options a:hover {
+    color: #000000;
+}
+
+/* ================PIE-PAGINA====================*/
+
+#footpage {
+    padding: 0% 18%;
+    padding-top: 2%;
+    padding-bottom: 2.5%;
+    margin-top: 12%;
+    box-shadow: 0rem .5rem 2rem #030303;
+
+}
+
+#social-media, #footer-text {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.rss-link {
+    font-size: 0rem;
+}
+
+.social-media-images, .rss-link {
+    margin: 3%;
+    width: 5%;
+    min-width: 60px;
+}
+
+#footer-text p:nth-child(2) {
+    margin-left: 3%;
+}
+
+/* ==================SCROLLBAR====================*/
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+#scrollPath, #progressBar, .points {
+    margin-right: 5px;
+}
+
+#scrollPath {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 101%;
+    border: 2px solid #1736bd;
+}
+
+#progressBar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 15px;
+    background-color: rgb(255, 255, 0);
+    z-index: 3;
+    transition: height .1s linear;
+}
+
+#pacman {
+    position: absolute;
+    bottom: -28px;
+    left: -14px;
+    width: 40px;
+    z-index: 4;
+    transform: rotateZ(90deg);
+    background-color: transparent;
+}
+
+#progressBar .points {
+    position: fixed;
+    right: 5px;
+    width: 6px;
+    height: 6px;
+    background-color: rgba(255, 255, 0, 0.849);
+}
+
+#point1 {
+    top: 7.5%;
+}
+
+#point2 {
+    top: 15%;
+}
+
+#point3 {
+    top: 22.5%;
+}
+
+#point4 {
+    top: 30%;
+}
+
+#point5 {
+    top: 37.5%;
+}
+
+#point6 {
+    top: 45%;
+}
+
+#point7 {
+    top: 52.5%;
+}
+
+#point8 {
+    top: 60%;
+}
+
+#point9 {
+    top: 67.5%;
+}
+
+#point10 {
+    top: 75%;
+}
+
+#point11 {
+    top: 82.5%;
+}
+
+#point12 {
+    top: 90%;
+}
+
+#point13 {
+    top: 97.5%;
+} 
+
+@media only screen and (max-width: 1150px) {
+
+    .social-media-images {
+        min-width: 70px;
+    }
+
+    #footer-text  {
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+
+    /* ================MENU-HAMBURGUESA====================*/
+
+    #hamburger-menu {
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        flex-direction: column;
+        width: 42.5px;
+        height: 50px;
+        margin-left: 5%;
+        cursor: pointer;
+    }
+
+    #hamburger-menu .hamburger-item {
+        display: block;
+        width: 42.5px;
+        height: 5px;
+        background-color: white;
+    }
+
+    #hamburger-menu.change .hamburger-item {
+        background-color: var(--primary-color);
+    }
+    
+    #nav-menu {
+        display: none;
+    }
+
+    #nav-menu.change {
+        display: block;
+        border-top: 2px solid white;
+    }
+
+    .navigation-options {
+        font-size: 1rem;
+    }
+
+    /* ================FOOTPAGE====================*/
+
+    .social-media-images, .rss-link {
+        width: 3%;
+        min-width: 45px;
+    }
+
+    #footer-text {
+        font-size: .9rem;
+    }
+    
+    #progressBar .points, #progressBar, #pacman, #scrollPath {
+        visibility: hidden;
+    }
+    
+}
